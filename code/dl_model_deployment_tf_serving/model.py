@@ -62,18 +62,3 @@ print(f'for age 40 and salary 40000, prediction is {prediction} ')
 
 # Storing the model 
 model.save('../../data/saved_model/dl_model/1')
-
-
-# loading the stored model
-from tensorflow.keras.models import load_model
-
-trained_model = load_model('../../data/saved_model/dl_model/1')
-
-prediction = trained_model.predict(sc.transform(np.array([[40,20000]])))[:, 1]
-
-
-print(f'for age 40 and salary 40000, prediction is {prediction} ')
-
-
-
-

@@ -18,7 +18,7 @@ import requests
 
 import numpy as np
 
-url='http://localhost:8501/v1/models/product_purchase_model:predict'
+url='http://localhost:8501/v1/models/product_purchase_model:model'
 sc=pickle.load(open('../../data/saved_model/sc.pickle', 'rb'))
 instances=sc.transform(np.array([[40,20000]]))
 instances=[[v for v in val] for val in instances]
